@@ -4,6 +4,7 @@ This repository contains 3 examples of I2C and I2C Slave driver that describe ho
 * I2C Master - I2C_Master_ex.cpp
 * I2C Master single byte version - I2C_Master_singlebyte_ex.cpp
 * I2C Slave - I2C_Slave_ex.cpp
+* I2C Scanner - I2C_bus_scanner.cpp
   
 > [!NOTE]
 > All examples contain information about how to use I2C but they are in context of two boards connected over I2C together, one acts like I2C master and second as I2C slave.
@@ -30,4 +31,4 @@ This repository contains 3 examples of I2C and I2C Slave driver that describe ho
 When we have a problem to estabilish connection over I2C then there are few basic points what we should check
 * wires are not damaged, correctly connected and not twisted
 * pull-up ressistors are pressent and have correct values
-* we are sure we have correct I2C address of our Slave device. To avoid any mistake in user application we use simple code, based on Linux i2cdetect function, to scan I2C bus for correctly connected slaves. You can switch to I2C_Scanner program or simply copy&paste the code and use it directly in your program.
+* we are sure we have correct I2C address of our Slave device. To avoid any mistake in user application we use simple code, based on Linux i2cdetect function, to scan I2C bus for correctly connected slaves. You can switch to [I2C_Scanner](https://github.com/mbed-ce-libraries-examples/I2C-examples/blob/main/I2C_bus_scanner.cpp) program or simply copy&paste the code and use it directly in your program.
