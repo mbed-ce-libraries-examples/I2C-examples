@@ -22,7 +22,32 @@ This repository contains 3 examples of I2C and I2C Slave driver that describe ho
 > [!IMPORTANT]
 > Remember that you need a pull-up resistors (R1 & R2) on SDA and SCL. All drivers on the I2C bus are required to be open collector, and so it is necessary to use pull-up resistors on the two signals. A typical value for the pull-up resistors is around 2.2k ohms, connected between the pin and 3v3.
 
-![image](https://github.com/user-attachments/assets/0519dc5d-878c-4c7c-b766-b500f2d51a9e)
+```
+              ┌-----┐                                                         ┌-----┐
+   ┌----------| USB |------------------┐                           ┌----------| USB |------------------┐
+   |          └-----┘ 	               |                           |          └-----┘ 	               |
+   |                        D15/SCL[.]-|---------------------┐-----|------------------------D15/SCL[.] |
+   |                        D14/SDA[.]-| -------------┐------|-----|------------------------D14/SDA[.] |
+   |                           AVDD[ ] |              |      |     |                           AVDD[ ] |
+   |                            GND[.]-|---------┐    |      |     |                            GND[ ] |
+   | [ ]NC                  SCK/D13[ ] |         |   ┌-┐    ┌-┐    | [ ]NC                  SCK/D13[ ] |
+   | [ ]IOREF              MISO/D12[ ] |         | R1| |  R2| |    | [ ]IOREF              MISO/D12[ ] |
+   | [ ]RST                MOSI/D11[ ] |         |   └-┘    └-┘    | [ ]RST                MOSI/D11[ ] |
+   | [ ]3V3                  CS/D10[ ] |         |    └------└-----|-[.]3V3                  CS/D10[ ] |
+   | [ ]5V                       D9[ ] |         |                 | [ ]5V                       D9[ ] |
+   | [ ]GND                      D8[ ] |         └-----------------|-[.]GND                      D8[ ] |
+   | [ ]GND                            |                           | [ ]GND                            |
+   | [ ]Vin                      D7[ ] |                           | [ ]Vin                      D7[ ] |
+   |                             D6[ ] |                           |                             D6[ ] |
+   | [ ]A0                       D5[ ] |                           | [ ]A0                       D5[ ] |
+   | [ ]A1                       D4[ ] |                           | [ ]A1                       D4[ ] |
+   | [ ]A2     	                 D3[ ] |                           | [ ]A2     	                 D3[ ] |
+   | [ ]A3                       D2[ ] |                           | [ ]A3                       D2[ ] |
+   | [ ]A4                   TX→/D1[ ] |                           | [ ]A4                   TX→/D1[ ] |
+   | [ ]A5                   RX←/D0[ ] |                           | [ ]A5                   RX←/D0[ ] |
+   |             Board A     _________╱                            |            Board B      _________╱
+    ╲______________________╱                                        ╲______________________╱
+```
 
 > [!WARNING]
 > The Mbed I2C API uses 8 bit addresses, so make sure to left-shift 7 bit addresses by 1 bit before passing them.
