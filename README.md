@@ -1,6 +1,6 @@
 # MbedCE-I2C-examples
 
-This repository contains 3 examples of I2C and I2C Slave driver that describe how to use it and also some tips.
+This repository contains 3 examples of I2C and I2C Slave driver that describe how to use it, some tips and also I2C scanner app.
 * I2C Master - I2C_Master_ex.cpp
 * I2C Master single byte version - I2C_Master_singlebyte_ex.cpp
 * I2C Slave - I2C_Slave_ex.cpp
