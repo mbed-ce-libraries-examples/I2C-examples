@@ -12,8 +12,8 @@ This repository contains 3 examples of I2C and I2C Slave driver that describe ho
 
 ## How to set up this project:
 
-1. Clone it to your machine.  Don't forget to use `--recursive` to clone the submodules: `git clone --recursive https://github.com/mbed-ce-libraries-examples/MbedCE-I2C-examples.git`
-2. You may want to update the mbed-os submodule to the latest version, with `cd MbedCE-I2C-examples/mbed-os && git fetch origin && git reset --hard origin/master`
+1. Clone it to your machine.  Don't forget to use `--recursive` to clone the submodules: `git clone --recursive https://github.com/mbed-ce-libraries-examples/I2C-examples.git`
+2. You may want to update the mbed-os submodule to the latest version, with `cd I2C-examples/mbed-os && git fetch origin && git reset --hard origin/master`
 3. If you don't have set up environment already, then visit https://github.com/mbed-ce/mbed-os/wiki#environmenttoolchain-setup
 4. The build tool will build all binaries, so you have to choose which one you want use - Master, Master (single byte) or Slave.
 5. Make physical connection between two mbed targets / dev boards (may not be the same) and deploy.
